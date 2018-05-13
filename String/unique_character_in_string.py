@@ -7,6 +7,11 @@
 4. can we assume this fits in memory ? yes
 """
 def _is_unique_string(given_string):
+	""" To detrmine if a given string has unqiue character or not
+	
+	:param given_string: 
+	"""
+
 	unique_char_count = {}
 	if given_string == '':
 		return 'String is empty'
@@ -19,9 +24,6 @@ def _is_unique_string(given_string):
 			unique_char_count[char] = 1
 
 	return True
-
-#given_string='saloni'
-#print _is_unique_string(given_string)
 
 given_strings = {
 	'',
