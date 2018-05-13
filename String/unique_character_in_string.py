@@ -6,7 +6,7 @@
 3. can we use additional data structures  ? yes
 4. can we assume this fits in memory ? yes
 """
-def _is_unique_string(given_string):
+def is_unique_string(given_string):
 	""" To detrmine if a given string has unqiue character or not
 	
 	:param given_string: 
@@ -18,9 +18,10 @@ def _is_unique_string(given_string):
 
 	for char in given_string:
 
-		if char in unique_char_count.keys():
-			return False
-		else: 
+		try:
+			if unique_char_count[char]:
+				return False
+		except KeyError: 
 			unique_char_count[char] = 1
 
 	return True
@@ -34,4 +35,4 @@ given_strings = {
 }
 
 for given_string in given_strings:
-	print "{0} is {1}".format(given_string, _is_unique_string(given_string))
+	print "{0} is {1}".format(given_string, is_unique_string(given_string))
