@@ -3,8 +3,6 @@ def reverse_array(array):
 	"""
 	to reverse the given character array
 	:param array: given array to be reversed 
-	:param start: starting pointer
-	:param end: ending pointer
 	"""
 	array_length = len(array)
 	if array_length < 2 : # if array length is 0 or 1, return array
