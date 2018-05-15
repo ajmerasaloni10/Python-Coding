@@ -17,10 +17,7 @@ def get_repeating_character(given_string):
 
 	:param given_string: a string for which repating characer has to be found.
 	"""
-	if len(given_string)<2:
-		return 
 	repeat_char = {}
-
 	for char in given_string:
 		char = char.lower()
 		try:
@@ -30,16 +27,18 @@ def get_repeating_character(given_string):
 		except KeyError:
 			repeat_char[char] = 1 
 
-	return 'no rpeating character in the string'
+	return "no rpeating character in the string {0}".format(given_string)
 
 given_string1 = 'java'    #expected a 
-given_string2 = ''				
-given_string3 = 'a'
+given_string2 = ''		  #empty string		
+given_string3 = 'a'	      # one character in a string
 given_string4 = 'Prany godha '  #expected a
-given_string5 = 'PlazZa'
+given_string5 = 'PlazZa'		# case sensitivity
+given_string6 = 'saloni' # demonstrates no repeating characer in the string 
 
 print get_repeating_character(given_string1)
 print get_repeating_character(given_string2)
 print get_repeating_character(given_string3)
 print get_repeating_character(given_string4)
 print get_repeating_character(given_string5)
+print get_repeating_character(given_string6)
